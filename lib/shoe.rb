@@ -2,8 +2,13 @@ class Shoe
   attr_accessor :color, :size, :material, :condition
   attr_reader :brand
 
+  BRANDS = []
+
   def initialize(brand)
     @brand = brand
+    if !BRANDS.include?(brand)
+      BRANDS << brand #Can we use the instance variable instead here? Is there a reason one is better than the other? What's the effect?
+    end
   end
 
   def cobble
