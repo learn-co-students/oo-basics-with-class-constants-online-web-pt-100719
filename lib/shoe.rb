@@ -1,13 +1,13 @@
 class Shoe
-  attr_accessor :color, :size, :material, :condition, :BRANDS
+  attr_accessor :color, :size, :material, :condition
   attr_reader :brand
 
   BRANDS = [] 
   
   def initialize(brand)
     @brand = brand
-    @@BRANDS = BRANDS
-    @@BRANDS << brand
+    @@brands = BRANDS
+    @@brands << brand
     
   end
 
@@ -17,15 +17,10 @@ class Shoe
   end
   
   
-  def brand=(brand)
-    @brand= brand
-    BRANDS << brand.uniq
-  end 
-  uggs = Shoe.new("Uggs")
-  nike = Shoe.new("Nike")
-  adidas = Shoe.new("Adidas")
-  uggs = Shoe.new("Uggs")
-  
+  # def brand=(brand)
+  #   @brand= brand
+  #   BRANDS << brand.uniq!
+  # end 
 
 end
  uggs = Shoe.new("Uggs")
